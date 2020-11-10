@@ -1,51 +1,35 @@
-.title{
-    font-size: 36px;font-weight: bold;
-    text-align:center;
+body {
+  background-color: black;
+  margin: 0px;
 }
 
-.menu-desktop{
-    display: block;
+.container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  background-color:black;
+  margin:0px;
 }
 
-.menu-mobile{
-    display: none;
+.text{
+  color:white;
+  font-size:36px;
+  font-weight:bold;
+  text-align: center;
+  animation-name:move;
+  animation-duration:2s;
+  animation-fill-mode: backwards;
+  animation-timing-function:cubic-bezier(.87,0,.75,1.25);
+  animation-iteration-count: ;
 }
 
-.frame{
-    width:1200px; margin: 0px auto;
-    text-align: center;
-}
-.box{
-    width: 260px;margin:10px;
-    display:inline-block;vertical-align: top;
-    background-color: #ffcccc;
-}
-
-/* CSS 3 Media Query */
-@media(max-width:1200px){
-    .frame{
-        width: 100%;
-    }
-    .box{
-        width: 45%;
-    }
-}
-
-@media (max-width:500px){
-    /*螢幕尺寸小魚500px的時候, 套用這塊區域的設定*/
-    .title{
-        font-size: 20px;
-    }
-    .menu-desktop{
-        display: none;
-    }
-    .menu-mobile{
-        display: block;
-    }
-    .frame{
-        width:100%;
-    }
-    .box{
-        width:90%;
-    }
+@keyframes move{
+  from {
+    transform: translateX(-1000px);
+  }
+  
+  to {
+    transform:translateX(0px);
+  }
 }
